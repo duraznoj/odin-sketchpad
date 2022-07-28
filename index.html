@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketchpad</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="column-left"></div>
+
+    <div class="header">
+      <div class="header-text">
+        SKETCHPAD
+      </div>
+    </div>
+
+    <div class="column-right"></div>
+
+
+    <div class="settings">
+      <button id="settings-button">SETTINGS</button>
+    </div>
+
+    <div class="sketchgrid">
+    </div>
+
+    <div class="footer">
+      <div class="footer-text">
+        Created by @duraznoj
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-modal">
+    <div class="settings-modal-content">
+      <h3>GRID SIZE:</h3>
+      <div id="grid-size"></div>
+      <div class="slidecontainer"> 
+        <input type="range" min="16" max="100" value="16" class="slider" id="slider-range">
+      </div>
+      <br>
+      <button id="start-button">START NEW SKETCH</button>
+    </div>
+  </div>
+  
+</body>
+</html> 
+<html></html>
