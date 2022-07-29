@@ -65,7 +65,7 @@ const initTiles = () => {
 
       //if user clicked a square then set flag to true so other squares know we are drawing and color the current square
       tileElement.addEventListener('pointerdown', (event) => {
-        if(!modalJustClosed && settingsModalContent.style.display === "none") {
+        if(!modalJustClosed && (settingsModalContent.style.display === "none" || window.getComputedStyle(settingsModalContent).getPropertyValue("display") === "none")) {
           drawLine = true;
           tileElement.style.backgroundColor = "black";
         }
@@ -76,12 +76,12 @@ const initTiles = () => {
 
       //color the current square if the user has clicked on another square
       tileElement.addEventListener('pointerover', (event) => {
-        if(drawLine && !modalJustClosed && settingsModalContent.style.display === "none") tileElement.style.backgroundColor = "black";
+        if(drawLine && !modalJustClosed && (settingsModalContent.style.display === "none" || window.getComputedStyle(settingsModalContent).getPropertyValue("display") === "none")) tileElement.style.backgroundColor = "black";
       });
 
       //color the current square and then set flag to false so other squares know we have stopped drawing
       tileElement.addEventListener('pointerup', (event) => {
-        if(!modalJustClosed && settingsModalContent.style.display === "none") {
+        if(!modalJustClosed && (settingsModalContent.style.display === "none" || window.getComputedStyle(settingsModalContent).getPropertyValue("display") === "none")) {
           tileElement.style.backgroundColor = "black";
           drawLine = false;
 
