@@ -11,7 +11,18 @@
 <body>
   <div class="container">
 
-    <div class="column-left"></div>
+    <div class="column-left">
+      <div class="toolbar">
+        <div>
+          <input type="radio" id="draw-radio" id="draw" name="tool-radio" checked>
+          <label for="draw-radio">DRAW</label>
+        </div>
+        <div>
+          <input type="radio" id="erase-radio" id="erase" name="tool-radio" >
+          <label for="erase-radio">ERASE</label>
+        </div>
+      </div>
+    </div>
 
     <div class="header">
       <div class="header-text">
@@ -38,13 +49,27 @@
 
   <div class="settings-modal">
     <div class="settings-modal-content">
-      <h3>GRID SIZE:</h3>
-      <div id="grid-size"></div>
-      <div class="slidecontainer"> 
-        <input type="range" min="16" max="100" value="16" class="slider" id="slider-range">
+      <div>
+        <input type="radio" id="mono-radio" name="settings-radio" checked>
+        <label for="mono-radio">MONOCHROME</label>
       </div>
-      <br>
-      <button id="start-button">START NEW SKETCH</button>
+      <div>
+        <input type="radio" id="rgb-radio" name="settings-radio">
+        <label for="rgb-radio">RANDOM COLORS</label>
+      </div>
+      <div>
+        <input type="radio" id="opacity-radio" name="settings-radio" >
+        <label for="rgb-radio">SHADING</label>
+      </div>
+      <div class="grid-size-slider">GRID SIZE:
+        <div id="grid-size"></div>
+        <div class="gridsizeslidecontainer"> 
+          <input type="range" min="16" max="100" value="16" class="gridsizeslider" id="grid-size-slider-range">
+        </div>
+      </div>
+      <div class="start-button">
+        <button id="start-button">START NEW SKETCH</button>
+      </div>
     </div>
   </div>
   
